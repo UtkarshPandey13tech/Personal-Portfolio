@@ -117,8 +117,8 @@ export const Hero = () => {
                     {/* profile photo */}
                     <div className="relative max-w-md mx-auto">
                         <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/30 via-transparent to-primary/10 blur-2xl animate-pulse"/>
-                        <div className="relative glass rounded-3xl p-2 glow-border">
-                            <img src="/img5.jpeg" alt="Utkarsh Pandey" className="w-full aspect-auto object-cover rounded-2xl" />
+                        <div className="relative glass rounded-full p-2 glow-border">
+                            <img src="/img5.jpeg" alt="Utkarsh Pandey" className="w-full aspect-auto object-cover rounded-full" />
 
                             {/* floating badge */}
                             <div className="absolute -bottom-4 -right-4 glass rounded-xl px-4 py-3 animate-float">

@@ -16,8 +16,8 @@ function App() {
       <About/>
       <Project/>
       <Experience/>
-      <Education/>
       <Certifications/>
+      <Education/>
       <Contact/>
     </main>
   </div>
