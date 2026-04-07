@@ -1,13 +1,13 @@
 const experience = [
       {
-        Period:"2025-Present",
+        Period:"Feb 2025-Present",
         role:"AI Coordinator",
         Organisation:"BBD University, Lucknow",
         Description:"As an AI Coordinator at BBD University, I am responsible for awaring my colleagues about the latest Events of AI in Our institution. I also experience Industrial Visits and workshops to enhance my knowledge and skills in the field of AI.",
         Skills:["AI coordination, AI Tools, Communication"]
       },
     {
-        Period:"2024-2025",
+        Period:"Aug 2024 - Oct 2025",
         role:"Aaina Technical Team Member",
         Organisation:"BBD University, Lucknow",
         Description: "Aaina is the cultural club of BBD University, Lucknow. As a technical team member, I was responsible for managing the technical aspects of the event, including setting up and maintaining the sound and lighting systems, as well as coordinating with other team members to ensure the smooth execution of the event.",
