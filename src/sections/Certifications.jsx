@@ -40,7 +40,7 @@ export const Certifications = () => {
                 </p>
                 </div>
                 {/* Project Section */}
-                 <div className="grid md:grid-cols-2 gap-8 ">
+                 <div className="grid md:grid-cols-4 gap-8 ">
                     {certifications.map((certificate , idx) => (
                         <div key={idx}
                          className="group glass rounded-2xl overflow-hidden animate-fade-in md:row-span-1"

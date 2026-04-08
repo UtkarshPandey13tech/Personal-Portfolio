@@ -1,9 +1,9 @@
 const experience = [
       {
         Period:"Feb 2025-Present",
-        role:"AI Coordinator",
+        role:"AI Student Coordinator",
         Organisation:"BBD University, Lucknow",
-        Description:"As an AI Coordinator at BBD University, I am responsible for awaring my colleagues about the latest Events of AI in Our institution. I also experience Industrial Visits and workshops to enhance my knowledge and skills in the field of AI.",
+        Description:"As an AI Student Coordinator at BBD University, I am responsible for awaring my colleagues about the latest Events of AI in Our institution. I also experience Industrial Visits and workshops to enhance my knowledge and skills in the field of AI.",
         Skills:["AI coordination, AI Tools, Communication"]
       },
     {

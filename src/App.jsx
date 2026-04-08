@@ -6,6 +6,7 @@ import {Experience} from "@/sections/Experience"
 import {Education} from "@/sections/Education"
 import {Certifications} from "@/sections/Certifications"
 import {Contact} from "@/sections/Contact"
+import {Footer} from "@/layout/Footer"
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
       <Education/>
       <Contact/>
     </main>
+    <Footer/>
   </div>
 }
 
