@@ -54,7 +54,9 @@ className="absolute top-1/2 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3x
             >
                 
                 {/* Timeline dot */}
-                <div className="absolute "></div>
+                <div className="absolute left-0 md:left-1/2 top-0 w-3 h-3 bg-primary rounded-full -translate-x-1/2 ring-4 ring-background z-10">{edu.current && (
+                    <span className="absolute inset-0 rounded-full bg-primary animate-ping opacity-75"/>)}
+                </div>
 
                 {/* Education  Content */}
                 <div className={ `pl-8 md:pl-0 ${idx % 2=== 0 ? "md:pr-16 md:text-right ": "md:col-start-2 md:pl-16"}`}>
