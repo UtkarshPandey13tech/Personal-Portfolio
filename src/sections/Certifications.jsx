@@ -1,6 +1,12 @@
 import { ArrowUpRight } from "lucide-react"
 import { AnimatedBorderButton } from "@/components/AnimatedBorderButton"
 const certifications=[
+     {
+        title: 'AWS AI/ML Essentials',
+        description: 'In this Course , I learnt about the AI-ML Basics',
+        image: '/ai-ml.jpg',
+        link: "blob:https://skillbuilder.aws/5c46da92-76dc-41c1-8ddf-2c1216eac327",
+    },
     {
         title: 'AI Tools Workshop',
         description: 'In this workshop , i got to know about AI Tools that can make our work faster',
