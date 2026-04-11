@@ -23,6 +23,7 @@ const certifications=[
         title:"Research Paper Presentation",
         description:"Presented my research paper at All India Conference on Advanced Civil Engineering Practices for Sustainable Infrastructure Development(ACED-2025)",
         image:"/certi2.jpeg",
+        link: "https://www.linkedin.com/in/utkarsh-pandey-865a04292/details/certifications/689542861/multiple-media-viewer/?profileId=ACoAAEb7980Bjffxty1EI2YrPzq_vInxInr6YMU&treasuryMediaId=1772541187388"
     },
 ]
 
