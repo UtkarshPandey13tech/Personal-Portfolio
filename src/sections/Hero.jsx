@@ -15,18 +15,31 @@ const skills=[
     "Git & GitHub",
     "HTML & CSS",
     "Tailwind CSS",
-    "Problem Solving",
-    "Data Structures & Algorithms",
     "MySQL",
     "RESTful APIs",
     "Vercel",
     "Vibe Coding",
     "AI Tools",
-    "Machine Learning Basics",
-    "GenAI",
-    "AWS Basics",
 ]
 
+const skillsRow1 = skills.filter((_, i) => i % 2 === 0)
+const skillsRow2 = skills.filter((_, i) => i % 2 === 1)
+
+const SkillMarqueeRow = ({ items, reverse = false }) => (
+    <div
+        className={`flex w-max animate-marquee hover:[animation-play-state:paused] ${
+            reverse ? "animate-marquee-reverse" : ""
+        }`}
+    >
+        {[...items, ...items].map((skill, idx) => (
+            <div key={`${skill}-${idx}`} className="flex-shrink-0 px-2">
+                <span className="inline-flex items-center px-5 py-2.5 rounded-full glass text-sm font-medium text-foreground/80 hover:text-primary border border-transparent hover:border-primary/30 transition-all duration-300 hover:shadow-[0_0_20px_color-mix(in_srgb,var(--color-primary)_25%,transparent)] whitespace-nowrap">
+                    {skill}
+                </span>
+            </div>
+        ))}
+    </div>
+)
 
 export const Hero = () => {
     return <section className="relative min-h-screen flex items-center overflow-hidden">
@@ -79,9 +92,10 @@ export const Hero = () => {
                     </div>
                     {/* cta section */}
                     <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
-                        <Button size="lg">Contact Me <ArrowRight className="w-5 h-5"/>
+                        <Button size="lg" href="#Contact">Contact Me <ArrowRight className="w-5 h-5"/>
                         </Button>
-                        <AnimatedBorderButton>
+                        <AnimatedBorderButton 
+                        href="/Utkarsh_Pandey_Resume_1.pdf" download="Utkarsh_Resume.pdf">
                         <Download className="w-5 h-5 "/>
                         Download Resume
                         </AnimatedBorderButton>
@@ -136,17 +150,22 @@ export const Hero = () => {
                 </div>
             </div>
             {/* Skills Section */}
-            <div className="mt-20 animate-fade-in animation-delay-600">
-                <p className="text-sm text-muted-foreground mb-6 text-center">Technlogies I work With</p>
-                <div className="relative overflow-hidden">
-                    <div className="flex animate-marquee">
-                        {[...skills,...skills].map((skill,idx)=>(
-                            <div key={idx} className="flex-shrink-0 px-8 py-4 ">
-                                <span className="text-xl fnt-semibold text-muted-foreground/50 hover:text-muted-foreground transition-colors">{skill}</span>
-                                <div/>
-                            </div>
-                        ))}
-                    </div>
+            <div className="mt-20 animate-fade-in animation-delay-600 space-y-6">
+                <p className="text-center">
+                    <span className="text-xs uppercase tracking-[0.2em] text-primary font-medium">
+                        Tech stack
+                    </span>
+                    <span className="block mt-2 text-2xl md:text-3xl font-bold text-foreground">
+                        Technologies I{" "}
+                        <span className="text-primary glow-text">work with</span>
+                    </span>
+                </p>
+                <div className="relative overflow-hidden py-2 space-y-3">
+                    <div className="pointer-events-none absolute inset-y-0 left-0 w-16 md:w-24 z-10 bg-gradient-to-r from-background to-transparent" />
+                    <div className="pointer-events-none absolute inset-y-0 right-0 w-16 md:w-24 z-10 bg-gradient-to-l from-background to-transparent" />
+
+                    <SkillMarqueeRow items={skillsRow1} />
+                    <SkillMarqueeRow items={skillsRow2} reverse />
                 </div>
             </div>
         </div>

@@ -125,7 +125,11 @@
   }
 
   .animate-marquee {
-    animation: marquee 30s linear infinite;
+    animation: marquee 35s linear infinite;
+  }
+
+  .animate-marquee-reverse {
+    animation: marquee 45s linear infinite reverse;
   }
 
   .animation-delay-100 {

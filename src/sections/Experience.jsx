@@ -1,6 +1,13 @@
 const experience = [
       {
-        Period:"Feb 2025-Present",
+        Period:"April 2026-May 2026",
+        role:"Full Stack Intern",
+        Organisation:"UpToskills",
+        Description:"As a Web Developer , I worked on Frontend of Admin Panel in UpToSkills Website and also worked on Frontend Part of their Ed-Tech Platform , My internship tenure was of 3 Months ,But due to Some Personal Reason I decided discontinue that internship in 1 Months",
+        Skills:["React.js , Node.js, Frontend Development, AI Tools, Communication"]
+       },
+      {
+        Period:"Feb 2026-Present",
         role:"AI Student Coordinator",
         Organisation:"BBD University, Lucknow",
         Description:"As an AI Student Coordinator at BBD University, I am responsible for awaring my colleagues about the latest Events of AI in Our institution. I also experience Industrial Visits and workshops to enhance my knowledge and skills in the field of AI.",
