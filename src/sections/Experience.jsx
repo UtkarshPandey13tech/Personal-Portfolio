@@ -1,4 +1,11 @@
 const experience = [
+    {
+       Period: "June 5, 2026- July 6, 2026",
+        role: "Summer Intern",
+        Organisation: "Tata Motors",
+        Description: "As a Summer Intern , I worked on a Project Offline Enterprise Data Vizualizer and Machine Learning Forecasting Tool and got to know that how a big organisation works, got opportunity work in team ",
+        Skills: ["Python , JavaScript, AI, Documentation, Presentation, React.js"]
+    }, 
 
     {
         Period: "April 2026-May 2026",

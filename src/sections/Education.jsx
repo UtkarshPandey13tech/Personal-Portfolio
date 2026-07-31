@@ -3,19 +3,19 @@ const education = [
         Period:"Aug 2023-Present",
         Degree:"B.Tech in Computer Science Engineering",
         Organisation:"BBD University, Lucknow",
-        Marks:"8.41 CGPA", 
+        Marks:"8.45 CGPA", 
       },
       {
         Period:"April 2022 - April 2023",
         Degree:"12th (Intermediate)",
         Organisation:"Laxmi Prasad Memorial Public School, Gorakhpur",
-        Marks: "72.3%",
+        Marks: "73.33%",
     },
     {
         Period:"April 2021 - April 2022",
         Degree:"10th (High School)",
         Organisation:"Laxmi Prasad Memorial Public School,  Gorakhpur",
-        Marks: "81.4%",
+        Marks: "83%",
     },
 
 
