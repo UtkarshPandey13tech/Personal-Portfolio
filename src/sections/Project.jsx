@@ -2,6 +2,14 @@ import { ArrowUpRight, Github } from "lucide-react"
 import { AnimatedBorderButton } from "@/components/AnimatedBorderButton"
 const projects=[
     {
+        title: 'Doctor Appointment Booking System',
+        description: 'A full-stack Doctor Appointment Booking System built using the MERN Stack that enables patients to book appointments online while allowing administrators to efficiently manage doctors, appointments, and payments.',
+        techStack: ['React.js', 'Node.js', 'Express.js','MongoDB'],
+        image: 'Project-3.png',
+        link: "https://doctor-appointment-booking-system-h.vercel.app/",
+        github:"https://github.com/UtkarshPandey13tech/Doctor-Appointment-Booking-System"
+    },
+    {
         title: 'Weather App',
         description: 'A weather forecasting application that provides real-time weather updates and forecasts for any location worldwide.',
         techStack: ['TypeScript', ' Open-Meteo-Weather API', 'CSS'],
