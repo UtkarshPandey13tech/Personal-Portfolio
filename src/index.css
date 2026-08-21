@@ -129,7 +129,10 @@
   }
 
   .scroll-reveal:not(.is-visible) .animate-fade-in {
+    animation: none;
     animation-play-state: paused;
+    opacity: 0;
+    transform: translateY(20px);
   }
 
   .scroll-reveal.is-visible .animate-fade-in {

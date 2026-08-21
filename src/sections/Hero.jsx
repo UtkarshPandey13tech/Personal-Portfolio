@@ -44,7 +44,7 @@ export const Hero = () => {
     return <section className="relative min-h-screen flex items-center overflow-hidden">
         {/* background */}
         <div className="absolute inset-0">
-            <img src="/hero-bg4.jpg"
+            <img src={`${import.meta.env.BASE_URL}hero-bg4.jpg`}
                 alt="Hero Background"
                 className="w-full h-full object-cover opacity-40" />
             <div className="absolute inset-0 bg-linear-to-b from-background/40 via-background/80 to-background" />
@@ -114,7 +114,7 @@ export const Hero = () => {
                     <div className="relative max-w-md mx-auto">
                         <div className="ambient-orb absolute inset-0 rounded-3xl bg-linear-to-br from-primary/30 via-transparent to-primary/10 blur-2xl animate-pulse" />
                         <div className="hero-photo-frame relative glass rounded-full p-2 glow-border">
-                            <img src="./public/Image_utk.jpeg" alt="Utkarsh Pandey" className="w-full aspect-square object-cover rounded-full" />
+                            <img src={`${import.meta.env.BASE_URL}Image_utk.jpeg`} alt="Utkarsh Pandey" className="w-full aspect-square object-cover rounded-full" />
 
                             {/* floating badge */}
                             <div className="absolute -bottom-4 -right-4 glass rounded-xl px-4 py-3 animate-float">
