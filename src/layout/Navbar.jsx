@@ -35,14 +35,14 @@ export const Navbar = () => {
 >
         <nav className="container mx-auto px-6 flex items-center justify-between relative">
             <a href="#" 
-            className="text-xl font-bold tracking-tight hover:text-primary"> 
-                Utkarsh's <span className="text-primary">Portfolio</span>
+            className="text-xl font-bold tracking-tight hover:text-primary transition-colors"> 
+                UP<span className="text-primary">.</span>
             </a>
             {/* desktop nav */}
             <div className="hidden md:flex items-center gap-1 absolute left-1/2 -translate-x-1/2">
                 <div className="glass rounded-full px-2 py-1 flex items-center gap-1">
                     {navLinks.map((link , index) => ( 
-                        <a key={index} href={link.href} className="px-4 py-2 text-sm text-muted-foreground hover:text-foreground rounded-full hover:bg-surface">
+                        <a key={index} href={link.href} className="px-4 py-2 text-sm text-muted-foreground hover:text-foreground rounded-full hover:bg-surface transition-colors duration-300">
                             {link.label}
                         </a>
                     ))}

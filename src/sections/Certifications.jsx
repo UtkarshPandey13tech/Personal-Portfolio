@@ -1,5 +1,5 @@
 import { ArrowUpRight } from "lucide-react"
-import { AnimatedBorderButton } from "@/components/AnimatedBorderButton"
+import { Reveal } from "@/components/Reveal"
 const certifications=[
      {
         title: 'AWS AI/ML Essentials',
@@ -34,9 +34,9 @@ export const Certifications = () => {
       <div className="absolute bottom-1/4 left-0 w-64 h-64 bg-highlight/5 rounded-full blur-3xl" />
         <div className="container mx-auto px-6 relative z-10">
             {/* section header */}
-            <div className="text-center mx-automax-w-3xl mb-16">
-                <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in">
-
+            <div className="text-center max-w-3xl mx-auto mb-16">
+                <span className="section-kicker text-primary text-sm font-medium tracking-wider uppercase animate-fade-in">
+                    Proof of practice
                 </span>
                 <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground">
                    Certifications and
@@ -47,19 +47,19 @@ export const Certifications = () => {
                 </p>
                 </div>
                 {/* Project Section */}
-                 <div className="grid md:grid-cols-4 gap-8 ">
+                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 ">
                     {certifications.map((certificate , idx) => (
-                        <div key={idx}
-                         className="group glass rounded-2xl overflow-hidden animate-fade-in md:row-span-1"
-                          style={{animationDelay: `${(idx+1)*100}ms`}}
-                          >
+                        <Reveal key={idx} delay={idx * 110} className="h-full">
+                        <div className="group glass rounded-2xl overflow-hidden h-full hover:-translate-y-2 transition-transform duration-500">
                             
                             {/* image of project */}
                             <div className="relative overflow-hidden aspect-video">
                              <img src={certificate.image} 
                              alt={certificate.title}
+                             loading="lazy"
+                             decoding="async"
                               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                            <div className="absolute inset-0 bg-gradient-to-t
+                            <div className="absolute inset-0 bg-linear-to-t
                              from-card via-card/50 to-transparent opacity-60"
                              />
                              {/* overlay link  */}
@@ -78,7 +78,8 @@ export const Certifications = () => {
                                 </div>
                                 <p className="text-muted-foreground">{certificate.description}</p>
                             </div>
-                        </div> 
+                        </div>
+                        </Reveal>
                     ))}
                  </div>
         </div>

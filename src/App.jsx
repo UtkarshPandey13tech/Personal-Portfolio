@@ -7,6 +7,7 @@ import {Education} from "@/sections/Education"
 import {Certifications} from "@/sections/Certifications"
 import {Contact} from "@/sections/Contact"
 import {Footer} from "@/layout/Footer"
+import { Reveal } from "@/components/Reveal"
 
 import { Toaster } from "react-hot-toast"
 
@@ -26,12 +27,12 @@ function App() {
     <Navbar/>
     <main>
       <Hero/>
-      <About/>
-      <Project/>
-      <Experience/>
-      <Certifications/>
-      <Education/>
-      <Contact/>
+        <Reveal><About/></Reveal>
+        <Reveal delay={80}><Project/></Reveal>
+        <Reveal delay={120}><Experience/></Reveal>
+        <Reveal delay={80}><Certifications/></Reveal>
+        <Reveal delay={120}><Education/></Reveal>
+        <Reveal><Contact/></Reveal>
     </main>
     <Footer/>
   </div>

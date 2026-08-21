@@ -1,4 +1,5 @@
 import { Code2, Users, Rocket, Activity } from "lucide-react";
+import { Reveal } from "@/components/Reveal";
 
 
 const highlihts= [
@@ -32,7 +33,7 @@ export default function About() {
    {/* left column  */}
      <div className="space-y-8 ">
         <div className="animate-fade-in">
-        <span className="text-white text-2xl font-lg tracking-wider uppercase">About Me</span>
+        <span className="section-kicker text-primary text-sm font-medium tracking-wider uppercase">About Me</span>
      </div>
      <h2 className="text-4xl md:text-5xl font-bold leading-tight animate-fade-in animation-delay-100 text-secondary-foreground">
         Building  the Future,
@@ -60,12 +61,13 @@ export default function About() {
       {/* right column */}
       <div className="grid sm:grid-cols-1 gap-8">
         {highlihts.map((item , idx) => (
-            <div key={idx} className="glass p-5 rounded-2xl animate-fade-in" 
-            style={{animationDelay: `${(idx+1)*100}ms`}}>
+            <Reveal key={idx} delay={idx * 100}>
+            <div className="glass p-5 rounded-2xl">
                 <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4 hover:bg-primary/20"><item.icon className="w-6 h-6 text-primary "/></div>
                 <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
                 <p className="text-sm text-muted-foreground">{item.Description}</p>
             </div>
+            </Reveal>
         ))}
       </div>
       </div>

@@ -31,7 +31,7 @@ const SkillMarqueeRow = ({ items, reverse = false }) => (
             }`}
     >
         {[...items, ...items].map((skill, idx) => (
-            <div key={`${skill}-${idx}`} className="flex-shrink-0 px-2">
+            <div key={`${skill}-${idx}`} className="shrink-0 px-2">
                 <span className="inline-flex items-center px-5 py-2.5 rounded-full glass text-sm font-medium text-foreground/80 hover:text-primary border border-transparent hover:border-primary/30 transition-all duration-300 hover:shadow-[0_0_20px_color-mix(in_srgb,var(--color-primary)_25%,transparent)] whitespace-nowrap">
                     {skill}
                 </span>
@@ -47,21 +47,7 @@ export const Hero = () => {
             <img src="/hero-bg4.jpg"
                 alt="Hero Background"
                 className="w-full h-full object-cover opacity-40" />
-            <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/80 to-background" />
-        </div>
-        {/* green dots */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            {[...Array(50)].map((_, i) => (
-                <div key={i} className="absolute w-1.5 h-1.5 rounded-full opacity-60"
-                    style={{
-                        backgroundColor: "#20B2A6",
-                        left: `${Math.random() * 100}%`,
-                        top: `${Math.random() * 100}%`,
-                        animation: `slow-drift ${20 + Math.random() * 10}s ease-in-out infinite`,
-                        animationDelay: `${Math.random() * 5}s`
-                    }}
-                />
-            ))}
+            <div className="absolute inset-0 bg-linear-to-b from-background/40 via-background/80 to-background" />
         </div>
         {/* content hero */}
         <div className="container mx-auto px-6 pt-32 pb-20 relative z-10">
@@ -76,12 +62,9 @@ export const Hero = () => {
                     </div>
                     {/* headline for hero section */}
                     <div className="space-y-4">
-                        <h1 className="text-5xl md:text-2xl lg:text-2xl font-bold leading-tight animate-fade-in animation-delay-100 ">
-                            Problem Solver <span className="text-primary glow-text">Passionate Coder </span> <br />
-                            Aspiring Software Engineer <br />
-                            <span className="font-serif italic font-normal text-white">Quick Learner
-
-                            </span>
+                        <h1 className="max-w-3xl text-5xl md:text-6xl lg:text-7xl font-bold leading-[0.98] tracking-tight animate-fade-in animation-delay-100 ">
+                            I build useful <span className="text-primary glow-text">digital products.</span><br />
+                            <span className="font-serif italic font-normal text-white">One thoughtful commit at a time.</span>
                         </h1>
                         <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200 ">
                             Hey, I am Utkarsh Pandey - a B.Tech Pre-Final Year Student,
@@ -129,9 +112,9 @@ export const Hero = () => {
                 <div className="relative animate-fade-in animation-delay-300">
                     {/* profile photo */}
                     <div className="relative max-w-md mx-auto">
-                        <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/30 via-transparent to-primary/10 blur-2xl animate-pulse" />
-                        <div className="relative glass rounded-full p-2 glow-border">
-                            <img src="/profile-photo.jpeg" alt="Utkarsh Pandey" className="w-full aspect-auto object-cover rounded-full" />
+                        <div className="ambient-orb absolute inset-0 rounded-3xl bg-linear-to-br from-primary/30 via-transparent to-primary/10 blur-2xl animate-pulse" />
+                        <div className="hero-photo-frame relative glass rounded-full p-2 glow-border">
+                            <img src="./public/Image_utk.jpeg" alt="Utkarsh Pandey" className="w-full aspect-square object-cover rounded-full" />
 
                             {/* floating badge */}
                             <div className="absolute -bottom-4 -right-4 glass rounded-xl px-4 py-3 animate-float">
@@ -160,8 +143,8 @@ export const Hero = () => {
                     </span>
                 </p>
                 <div className="relative overflow-hidden py-2 space-y-3">
-                    <div className="pointer-events-none absolute inset-y-0 left-0 w-16 md:w-24 z-10 bg-gradient-to-r from-background to-transparent" />
-                    <div className="pointer-events-none absolute inset-y-0 right-0 w-16 md:w-24 z-10 bg-gradient-to-l from-background to-transparent" />
+                    <div className="pointer-events-none absolute inset-y-0 left-0 w-16 md:w-24 z-10 bg-linear-to-r from-background to-transparent" />
+                    <div className="pointer-events-none absolute inset-y-0 right-0 w-16 md:w-24 z-10 bg-linear-to-l from-background to-transparent" />
 
                     <SkillMarqueeRow items={skillsRow1} />
                     <SkillMarqueeRow items={skillsRow2} reverse />
@@ -173,7 +156,7 @@ export const Hero = () => {
       animate-fade-in animation-delay-800"
         >
             <a
-                href="#about"
+                href="#About"
                 className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors group"
             >
                 <span className="text-xs uppercase tracking-wider">Scroll</span>

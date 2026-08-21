@@ -1,5 +1,5 @@
 import { ArrowUpRight, Github } from "lucide-react"
-import { AnimatedBorderButton } from "@/components/AnimatedBorderButton"
+import { Reveal } from "@/components/Reveal"
 const projects=[
     {
         title: 'Doctor Appointment Booking System',
@@ -34,7 +34,7 @@ export const Project = () => {
         <div className="container mx-auto px-6 relative z-10">
             {/* section header */}
             <div className="text-center mx-automax-w-3xl mb-16">
-                <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in">
+                <span className="section-kicker text-primary text-sm font-medium tracking-wider uppercase animate-fade-in">
                     Feature Work
                 </span>
                 <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground">
@@ -47,17 +47,17 @@ export const Project = () => {
                 </p>
                 </div>
                 {/* Project Section */}
-                 <div className="grid md:grid-cols-4 gap-8 ">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 ">
                     {projects.map((project , idx) => (
-                        <div key={idx}
-                         className="group glass rounded-2xl overflow-hidden animate-fade-in md:row-span-1"
-                          style={{animationDelay: `${(idx+1)*100}ms`}}
-                          >
+                        <Reveal key={idx} delay={idx * 120} className="h-full">
+                        <div className="project-card group glass rounded-2xl overflow-hidden h-full">
                             
                             {/* image of project */}
                             <div className="relative overflow-hidden aspect-video">
                              <img src={project.image} 
                              alt={project.title}
+                             loading="lazy"
+                             decoding="async"
                               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                             <div className="absolute inset-0 bg-gradient-to-t
                              from-card via-card/50 to-transparent opacity-60"
@@ -88,8 +88,13 @@ export const Project = () => {
                                      className="px-4 py-1.5 rounded-full bg-surface text-xs font-medium border border-border/50 text-muted-foreground hover:border-primary/50 hover:text-primary transition-all duration-300">{tech}</span>
                                 ))}
                                 </div>
+                                <div className="flex items-center gap-4 pt-2 text-sm font-medium">
+                                    {project.link && <a href={project.link} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-primary hover:text-white transition-colors">Live preview <ArrowUpRight className="w-4 h-4" /></a>}
+                                    <a href={project.github} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-muted-foreground hover:text-white transition-colors"><Github className="w-4 h-4" /> Source</a>
+                                </div>
                             </div>
-                        </div> 
+                        </div>
+                        </Reveal>
                     ))}
                  </div>
         </div>

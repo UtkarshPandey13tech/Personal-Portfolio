@@ -2,7 +2,7 @@ import { Github, Linkedin, Twitter, Heart } from "lucide-react";
 
 const socialLinks = [
   { icon: Github, href: "https://github.com/UtkarshPandey13tech", label: "GitHub" },
-  { icon: Linkedin, href: "www.linkedin.com/in/utkarsh-pandey-865a04292", label: "LinkedIn" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/utkarsh-pandey-865a04292", label: "LinkedIn" },
   { icon: Twitter, href: "https://x.com/UtkarshPandey3_", label: "Twitter" },
 ];
 
