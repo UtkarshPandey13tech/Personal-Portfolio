@@ -67,7 +67,7 @@ export const Hero = () => {
                             <span className="font-serif italic font-normal text-white">One thoughtful commit at a time.</span>
                         </h1>
                         <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200 ">
-                            Hey, I am Utkarsh Pandey - a B.Tech Pre-Final Year Student,
+                            Hey, I am Utkarsh Pandey - a B.Tech Final Year Student,
                             with a passion for coding and problem-solving. I am an aspiring software engineer, eager to learn and grow in the tech industry.
                             I am dedicated to honing my skills and contributing to innovative projects.
                         </p>
