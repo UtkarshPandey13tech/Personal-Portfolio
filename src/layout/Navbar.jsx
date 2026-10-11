@@ -34,9 +34,9 @@ export const Navbar = () => {
   } z-50`}
 >
         <nav className="container mx-auto px-6 flex items-center justify-between relative">
-            <a href="#" 
+            <a href="https://kesvex.github.io/" 
             className="text-xl font-bold tracking-tight hover:text-primary transition-colors"> 
-                UP<span className="text-primary">.</span>
+                UTKARSH <span className="text-primary">.</span>
             </a>
             {/* desktop nav */}
             <div className="hidden md:flex items-center gap-1 absolute left-1/2 -translate-x-1/2">
