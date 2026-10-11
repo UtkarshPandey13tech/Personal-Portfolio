@@ -74,7 +74,7 @@ export const Hero = () => {
                     </div>
                     {/* cta section */}
                     <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
-                        <Button href="#Contact" size="lg" >Contact Me <ArrowRight className="w-5 h-5" />
+                        <Button href="/contact" size="lg" >Contact Me <ArrowRight className="w-5 h-5" />
                         </Button>
                         <AnimatedBorderButton
                             href="/Utkarsh_Pandey_Resume_1.pdf" download="Utkarsh_Resume.pdf">
@@ -156,7 +156,7 @@ export const Hero = () => {
       animate-fade-in animation-delay-800"
         >
             <a
-                href="#About"
+                href="/about"
                 className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors group"
             >
                 <span className="text-xs uppercase tracking-wider">Scroll</span>

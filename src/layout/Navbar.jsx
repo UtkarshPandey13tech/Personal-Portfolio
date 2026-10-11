@@ -1,14 +1,14 @@
-import {Button} from "@/components/Button"
-import { Menu ,X} from "lucide-react"
-import {useState} from "react"
-import { useEffect } from "react"
+import { Menu, X } from "lucide-react"
+import { useEffect, useState } from "react"
+import { Link, NavLink } from "react-router-dom"
+
 const navLinks = [
-    {  href: "#About", label: "About" },
-    {  href: "#Project", label: "Project" },
-    {  href: "#Experience", label: "Experience" },
-    {  href:"#Education" ,label:"Education"},
-    {  href: "#Certifications", label: "Certifications" },
-    {  href: "#Contact", label: "Contact" }
+    { href: "/about", label: "About" },
+    { href: "/projects", label: "Projects" },
+    { href: "/experience", label: "Experience" },
+    { href: "/education", label: "Education" },
+    { href: "/certifications", label: "Certifications" },
+    { href: "/contact", label: "Contact" }
 ]
 
 export const Navbar = () => {
@@ -27,6 +27,7 @@ export const Navbar = () => {
        }
 
     }, []);
+
     return (
     <header
   className={`fixed top-0 left-0 right-0 transition-all duration-500 ${
@@ -34,17 +35,17 @@ export const Navbar = () => {
   } z-50`}
 >
         <nav className="container mx-auto px-6 flex items-center justify-between relative">
-            <a href="https://kesvex.github.io/" 
+            <Link to="/"
             className="text-xl font-bold tracking-tight hover:text-primary transition-colors"> 
                 UTKARSH <span className="text-primary">.</span>
-            </a>
+            </Link>
             {/* desktop nav */}
             <div className="hidden md:flex items-center gap-1 absolute left-1/2 -translate-x-1/2">
                 <div className="glass rounded-full px-2 py-1 flex items-center gap-1">
-                    {navLinks.map((link , index) => ( 
-                        <a key={index} href={link.href} className="px-4 py-2 text-sm text-muted-foreground hover:text-foreground rounded-full hover:bg-surface transition-colors duration-300">
+                    {navLinks.map((link) => ( 
+                        <NavLink key={link.href} to={link.href} className={({ isActive }) => `px-4 py-2 text-sm rounded-full hover:bg-surface transition-colors duration-300 ${isActive ? "text-primary bg-surface" : "text-muted-foreground hover:text-foreground"}`}>
                             {link.label}
-                        </a>
+                        </NavLink>
                     ))}
                 </div>
             </div>
@@ -62,13 +63,13 @@ export const Navbar = () => {
 {isMobileMenuOpen &&( 
 <div className="md:hidden glass-strong animate-fade-in">
 <div className="container mx-auto px-6 py-6 flex flex-col gap-4 ">
-    {navLinks.map((link , index) => ( 
-                    <a key={index}
-                    href={link.href}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="text-lg text-muted-foreground hover:text-foreground py-2">
-                    {link.label}
-                    </a>
+    {navLinks.map((link) => ( 
+    <NavLink key={link.href}
+    to={link.href}
+    onClick={() => setIsMobileMenuOpen(false)}
+    className={({ isActive }) => `text-lg py-2 ${isActive ? "text-primary" : "text-muted-foreground hover:text-foreground"}`}>
+    {link.label}
+    </NavLink>
                 ))}
 
                 
