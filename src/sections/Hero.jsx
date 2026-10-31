@@ -89,7 +89,7 @@ export const Hero = () => {
                         {[
                             { icon: FaGithub, href: 'https://github.com/UtkarshPandey13tech' },
                             { icon: FaLinkedin, href: 'https://www.linkedin.com/in/utkarsh-pandey-865a04292' },
-                            { icon: SiLeetcode, href: 'https://leetcode.com/u/Utkarsh_1307/' }
+                            { icon: SiLeetcode, href: 'https://leetcode.com/u/Batman_1307/' }
                         ].map((social, idx) => {
 
                             const Icon = social.icon
